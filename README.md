@@ -15,29 +15,26 @@ StudyTube is a full-stack web application that helps learners complete long YouT
 * Responsive Mobile-Friendly UI
 
 ## Screenshots
-
-Add screenshots here after deployment.
-
+<img width="1918" height="901" alt="image" src="https://github.com/user-attachments/assets/3801135c-1542-461c-93f4-8d5fc02615a7" />
 ### Dashboard
-
+<img width="1250" height="332" alt="image" src="https://github.com/user-attachments/assets/da6d963b-b0a2-4e11-b84f-c4f18f2a9585" />
 ### Roadmap
-
+<img width="737" height="508" alt="image" src="https://github.com/user-attachments/assets/c262be9f-ae81-4dca-8650-5a0c858f3b0a" />
 ### Progress Tracking
-
+<img width="1252" height="491" alt="image" src="https://github.com/user-attachments/assets/7e7607b0-46d6-4424-84dc-d2f0bbaecea8" />
 ## Live Demo
-
+Repository:
+https://github.com/Adarshsingh99/studytube
 Frontend:
-https://your-vercel-url.vercel.app
-
+studytube-kappa-seven.vercel.app
 Backend:
-https://your-render-url.onrender.com
+https://studytube-6cip.onrender.com
 
 ## Tech Stack
 
 Frontend:
 
 * React
-* Vite
 * Tailwind CSS
 * React Router
 * Axios
@@ -66,15 +63,41 @@ External APIs:
 * Playlist duration calculation
 * Timestamp-based resume functionality
 * Daily roadmap generation
-* Progress persistence
 
-## Future Improvements
+## 🔮 Future Improvements
 
-* Embedded YouTube Player
-* Automatic Progress Sync
-* Firebase Push Notifications
-* AI-generated Notes
-* PWA Support
+### Continue Watching Progress Sync
+
+* Store the user's last watched timestamp.
+* Resume videos from the exact saved position.
+* Synchronize roadmap progress with actual watch progress.
+* Seamless continuation across devices.
+
+### Embedded YouTube Player
+
+* Watch videos directly inside StudyTube.
+* Track learning progress without leaving the platform.
+* Enable timestamp-based navigation from roadmap tasks.
+
+### Automatic Progress Sync
+
+* Detect watched duration automatically.
+* Update completion percentage in real time.
+* Remove the need for manual progress updates.
+
+### Firebase Push Notifications
+
+* Daily study reminders.
+* Roadmap completion alerts.
+* Study streak notifications.
+* Smart reminders based on user activity.
+
+### Cloud Database Migration
+
+* Migrate from SQLite to PostgreSQL/MySQL.
+* Persistent production data.
+* Better scalability and reliability.
+
 
 ## Author
 
@@ -82,4 +105,4 @@ Adarsh Singh
 
 B.Tech CSE Student
 
-GitHub: https://github.com/yourusername
+GitHub: https://github.com/Adarshsingh99
