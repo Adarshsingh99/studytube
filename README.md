@@ -23,10 +23,10 @@ StudyTube is a full-stack web application that helps learners complete long YouT
 ### Progress Tracking
 <img width="1252" height="491" alt="image" src="https://github.com/user-attachments/assets/7e7607b0-46d6-4424-84dc-d2f0bbaecea8" />
 ## Live Demo
-Repository:
-https://github.com/Adarshsingh99/studytube
+
 Frontend:
 studytube-kappa-seven.vercel.app
+
 Backend:
 https://studytube-6cip.onrender.com
 
