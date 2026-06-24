@@ -1,119 +1,85 @@
 # StudyTube
 
-StudyTube is a full-stack study planner for long YouTube videos and playlists. Users can register, paste a YouTube URL, choose a completion target, and get a daily roadmap with progress tracking, streaks, reminders, and resume links that open YouTube at the correct timestamp.
+StudyTube is a full-stack web application that helps learners complete long YouTube videos and playlists through personalized study roadmaps, progress tracking, and daily reminders.
 
-## Stack
+## Features
 
-- Frontend: React, Vite, Tailwind CSS, React Router, Axios, React Query, Zustand, Recharts
-- Backend: FastAPI, SQLAlchemy, Pydantic, Alembic, JWT authentication
-- Database: MySQL in production, SQLite fallback for local development
-- Notifications: Firebase Cloud Messaging integration point
-- Deployment: Vercel frontend, Render backend, hosted MySQL
+* User Authentication (JWT)
+* YouTube Video Tracking
+* YouTube Playlist Tracking
+* Automatic Study Roadmap Generation
+* Daily Progress Tracking
+* Study Streak System
+* Reminder Management
+* Dashboard Analytics
+* Responsive Mobile-Friendly UI
 
-## Project Structure
+## Screenshots
 
-```text
-backend/
-  app/
-    main.py
-    config.py
-    database/
-    models/
-    schemas/
-    routers/
-    services/
-    utils/auth/
-  alembic/
-  requirements.txt
-frontend/
-  src/
-    pages/
-    components/
-    services/
-    store/
-    hooks/
-    routes/
-  package.json
-```
+Add screenshots here after deployment.
 
-## Local Backend
+### Dashboard
 
-```bash
-cd backend
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-copy .env.example .env
-uvicorn app.main:app --reload
-```
+### Roadmap
 
-Set `DATABASE_URL` to MySQL for production-like development:
+### Progress Tracking
 
-```env
-DATABASE_URL=mysql+pymysql://studytube:studytube@localhost:3306/studytube
-YOUTUBE_API_KEY=your-youtube-data-api-key
-JWT_SECRET_KEY=replace-with-a-long-random-secret
-```
+## Live Demo
 
-In development, tables are created on startup. For production, run Alembic migrations:
+Frontend:
+https://your-vercel-url.vercel.app
 
-```bash
-cd backend
-alembic upgrade head
-```
+Backend:
+https://your-render-url.onrender.com
 
-## Local Frontend
+## Tech Stack
 
-```bash
-cd frontend
-npm install
-copy .env.example .env
-npm run dev
-```
+Frontend:
 
-Set:
+* React
+* Vite
+* Tailwind CSS
+* React Router
+* Axios
+* React Query
+* Zustand
 
-```env
-VITE_API_URL=http://localhost:8000/api
-```
+Backend:
 
-## Main API Endpoints
+* FastAPI
+* SQLAlchemy
+* JWT Authentication
+* Alembic
 
-- `POST /api/auth/register`
-- `POST /api/auth/login`
-- `GET /api/auth/me`
-- `GET /api/learning-items/dashboard`
-- `GET /api/learning-items`
-- `POST /api/learning-items`
-- `GET /api/learning-items/{item_id}`
-- `GET /api/learning-items/{item_id}/roadmap`
-- `GET /api/progress/{item_id}`
-- `PATCH /api/progress/{item_id}`
-- `POST /api/progress/{item_id}/recalculate`
-- `GET /api/reminders/{item_id}`
-- `PUT /api/reminders/{item_id}`
+Database:
 
-## YouTube Integration
+* SQLite (Development)
+* MySQL (Production Ready)
 
-The backend uses the YouTube Data API v3 to fetch:
+External APIs:
 
-- Video and playlist metadata
-- Titles
-- Thumbnails
-- Channel names
-- Durations
-- Playlist video ordering
+* YouTube Data API v3
 
-Create a YouTube Data API key in Google Cloud Console and set `YOUTUBE_API_KEY`.
+## Key Challenges Solved
 
-## Firebase Notifications
+* Long video completion planning
+* Playlist duration calculation
+* Timestamp-based resume functionality
+* Daily roadmap generation
+* Progress persistence
 
-`NotificationService` is prepared for Firebase Cloud Messaging. Set `FIREBASE_CREDENTIALS_JSON` to a JSON string of a Firebase service account. The reminders API stores reminder times and optional FCM tokens; a production scheduler can call `NotificationService.send_daily_goal` at the configured times.
+## Future Improvements
 
-## Roadmap Logic
+* Embedded YouTube Player
+* Automatic Progress Sync
+* Firebase Push Notifications
+* AI-generated Notes
+* PWA Support
 
-Roadmaps split total duration across target days. Playlist roadmaps use an absolute timeline and then map each daily segment back to the correct video and timestamp, so a day can start in one video and end in another.
+## Author
 
-## Deployment
+Adarsh Singh
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for Vercel, Render, and MySQL setup.
+B.Tech CSE Student
+
+GitHub: https://github.com/yourusername
