@@ -25,7 +25,7 @@ StudyTube is a full-stack web application that helps learners complete long YouT
 ## Live Demo
 
 Frontend:
-studytube-kappa-seven.vercel.app
+[studytube-kappa-seven.vercel.app](https://studytube-kappa-seven.vercel.app/)
 
 Backend:
 https://studytube-6cip.onrender.com
